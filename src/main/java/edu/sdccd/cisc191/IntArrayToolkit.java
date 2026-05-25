@@ -19,7 +19,7 @@ public class IntArrayToolkit {
     public static int sum(int[] a) {
         if (a == null) {
             throw new IllegalArgumentException("Input array cannot be null");
-    }
+        }
 
         int total = 0;
         for (int value : a) {
@@ -30,46 +30,46 @@ public class IntArrayToolkit {
 
     }
 
-        /**
-         * Returns the maximum value in the array.
-         * @throws IllegalArgumentException if a is null or empty
-         */
+    /**
+     * Returns the maximum value in the array.
+     * @throws IllegalArgumentException if a is null or empty
+     */
 
-        public static int max(int[] a) {
-            // TODO: implement
-            if (a == null || a.length == 0) {
-                throw new IllegalArgumentException("Array cannot be null or empty");
-            }
-
-            int max = a[0];
-            for (int i = 1; i < a.length; i++) {
-                if (a[i] > max) {
-                    max = a[i];
-                }
-            }
-
-            return max;
+    public static int max(int[] a) {
+        // TODO: implement
+        if (a == null || a.length == 0) {
+            throw new IllegalArgumentException("Array cannot be null or empty");
         }
 
-
-        /**
-         * Returns the index of the first occurrence of target, or -1 if not found.
-         * @throws IllegalArgumentException if a is null
-         */
-        public static int indexOf(int[] a, int target) {
-            // TODO: implement
-            if (a == null) {
-                throw new IllegalArgumentException("Array cannot be null");
+        int max = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] > max) {
+                max = a[i];
             }
-
-            for (int i = 0; i < a.length; i++) {
-                if (a[i] == target) {
-                    return i;
-                }
-            }
-
-            return -1;
         }
+
+        return max;
+    }
+
+
+    /**
+     * Returns the index of the first occurrence of target, or -1 if not found.
+     * @throws IllegalArgumentException if a is null
+     */
+    public static int indexOf(int[] a, int target) {
+        // TODO: implement
+        if (a == null) {
+            throw new IllegalArgumentException("Array cannot be null");
+        }
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == target) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
 
     /**
      * Returns a NEW array containing the same values as a, sorted ascending.

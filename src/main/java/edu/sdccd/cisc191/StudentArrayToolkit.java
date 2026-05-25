@@ -35,18 +35,18 @@ public class StudentArrayToolkit {
      * Returns the Student if found, otherwise null.
      */
     public static Student findByIdLinear(Student[] students, int id) {
-            if (students == null) {
-                throw new IllegalArgumentException("Array cannot be null");
-            }
-
-            for (Student s : students) {
-                if (s.getId() == id) {
-                    return s;
-                }
-            }
-
-            return null;
+        if (students == null) {
+            throw new IllegalArgumentException("Array cannot be null");
         }
+
+        for (Student s : students) {
+            if (s.getId() == id) {
+                return s;
+            }
+        }
+
+        return null;
+    }
 
     /**
      * Returns a NEW array containing the top N students by GPA desc (ties: name asc).
